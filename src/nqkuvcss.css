@@ -121,14 +121,14 @@ body {
     border-radius: 50%;
 }
 
-.chat-box > .chat-box-body #chat-messages .my-profile {
+/* .chat-box > .chat-box-body #chat-messages .my-profile {
     color: #afafaf;
     align-self: flex-end;
 }
 
 .chat-box > .chat-box-body #chat-messages .other-profile {
     color: #afafaf;
-}
+} */
 
 .chat-box > #controls {
     width: 100%;
