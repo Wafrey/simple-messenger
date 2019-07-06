@@ -74,7 +74,8 @@ body {
 .chat-box > .chat-box-body #chat-messages {
     width: 100%;
     padding: 20px 15px;
-    margin-top: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -99,11 +100,21 @@ body {
     align-self: flex-end;
 }
 
+#chat-messages:nth-child(even) div.message.my-message {
+    background: #e2e2e2;
+    color: #000;
+    align-self: flex-start;
+}
+
+#chat-messages:nth-child(even) div.profile.my-profile {
+    align-self: flex-start;
+}
+
 .chat-box > .chat-box-body #chat-messages .other-message {
     background-color: #e2e2e2;
 }
 
-.chat-box > .chat-box-body #chat-messages .profile:nth-child(even) {
+.chat-box > .chat-box-body #chat-messages .profile {
     margin: 2px 0;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
@@ -166,6 +177,7 @@ input[type=text] {
     border-radius: 25px;
     box-shadow: 0 4px #c0c0c0;
 }
+
 #delete {
     padding: 8px;
     font-size: 16px;
