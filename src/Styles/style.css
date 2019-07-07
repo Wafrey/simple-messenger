@@ -10,14 +10,16 @@
 
 /* Main CSS */
 
-h1{
+h1 {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: solid 1px #cfcfcf;
 }
 
-html, body, .flexbox {
+html,
+body,
+.flexbox {
     width: 100%;
     height: 100%;
 }
@@ -51,7 +53,7 @@ body {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
 }
 
-.chat-box > .chat-box-header {
+.chat-box>.chat-box-header {
     width: 100%;
     padding: 20px 15px;
     border-bottom: solid 1px #cfcfcf;
@@ -59,11 +61,11 @@ body {
     display: flex;
 }
 
-.chat-box > .chat-box-header img{
+.chat-box>.chat-box-header img {
     margin-right: 1rem;
 }
 
-.chat-box > .chat-box-body {
+.chat-box>.chat-box-body {
     height: 100%;
     display: flex;
     overflow: auto;
@@ -71,7 +73,7 @@ body {
     flex-direction: column;
 }
 
-.chat-box > .chat-box-body #chat-messages {
+.chat-box>.chat-box-body #chat-messages {
     width: 100%;
     padding: 20px 15px;
     margin-top: 10px;
@@ -81,7 +83,7 @@ body {
     box-sizing: border-box;
 }
 
-.chat-box > .chat-box-body #chat-messages .message {
+.chat-box>.chat-box-body #chat-messages .message {
     width: 80%;
     padding: 20px 15px;
     margin: 2px 0;
@@ -90,14 +92,18 @@ body {
     transition: height 0.3s ease-in-out;
 }
 
-.chat-box > .chat-box-body #chat-messages .message.hide {
+.chat-box>.chat-box-body #chat-messages .message.hide {
     height: 0;
 }
 
-.chat-box > .chat-box-body #chat-messages .my-message {
+.chat-box>.chat-box-body #chat-messages .my-message {
     color: #fff;
     background-color: #006ae3;
     align-self: flex-end;
+}
+
+#chat-messages div.profile.my-profile span {
+    padding-left: 5px;
 }
 
 #chat-messages:nth-child(even) div.message.my-message {
@@ -110,21 +116,22 @@ body {
     align-self: flex-start;
 }
 
-.chat-box > .chat-box-body #chat-messages .other-message {
-    background-color: #e2e2e2;
+#chat-messages:nth-child(even) div.profile.my-profile span {
+    align-self: flex-start;
+    padding-left: 5px;
 }
 
-.chat-box > .chat-box-body #chat-messages .profile {
+.chat-box>.chat-box-body #chat-messages .profile {
     margin: 2px 0;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
 }
 
-.chat-box > .chat-box-body #chat-messages .profile.hide {
+.chat-box>.chat-box-body #chat-messages .profile.hide {
     height: 0;
 }
 
-.chat-box > .chat-box-body #chat-messages .profile img {
+.chat-box>.chat-box-body #chat-messages .profile img {
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -132,16 +139,12 @@ body {
     border-radius: 50%;
 }
 
-.chat-box > .chat-box-body #chat-messages .my-profile {
+.chat-box>.chat-box-body #chat-messages .my-profile {
     color: #afafaf;
     align-self: flex-end;
 }
 
-.chat-box > .chat-box-body #chat-messages .other-profile {
-    color: #afafaf;
-}
-
-.chat-box > #controls {
+.chat-box>#controls {
     width: 100%;
     padding: 20px 15px;
     border-top: solid 1px #cfcfcf;
@@ -158,14 +161,17 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-#author, #content {
+#author,
+#content {
     width: 34em;
 }
 
 #submit {
     margin: 32px;
 }
-#submit, #refresh {
+
+#submit,
+#refresh {
     padding: 8px;
     font-size: 16px;
     text-align: center;
@@ -191,13 +197,15 @@ input[type=text] {
     box-shadow: 0 4px #c0c0c0;
 }
 
-#submit:hover, #refresh:hover, #delete:hover{
+#submit:hover,
+#refresh:hover,
+#delete:hover {
     border-color: #fff;
     box-shadow: none;
 }
 
-#error{
-    color:red;
+#error {
+    color: red;
     margin-left: 1rem;
     font-size: 18px;
 }

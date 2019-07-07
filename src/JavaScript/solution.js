@@ -5,6 +5,7 @@ function attachEvents() {
     let firstMessageKey = ``;
     let historyClicked = false;
     let username = ``;
+    let counter = 1;
 
     $('#author').on('click', () => {
         $('#author').attr('placeholder', '');
@@ -21,6 +22,8 @@ function attachEvents() {
         let content = $('#content').val();
         let timeStamp = Date.now();
         let message;
+
+
 
         if (author === '' && firstMessage === 0) {
             $('#error').text('Please enter your name!');
@@ -83,14 +86,27 @@ function attachEvents() {
                                 profileName = `${message.author}\n`;
                                 newMessage = `${message.content}\n`;
 
-                                div = $(`<div id="chat-messages"><div class="profile my-profile"><img src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
+                                div = $(`<div id="chat-messages"><div class="profile my-profile"><img id="myImg" src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
 
                             } else if (historyClicked) {
                                 $('#refresh').click();
                             }
                         }
 
-                        $('.chat-box-body').append(div);
+                        console.log(counter);
+                        if (counter % 2 === 0) {
+
+                            $('.chat-box-body').append(div);
+                            $('#myImg').attr('src', 'https://www.nautiljon.com/images/perso/00/87/itachi_uchiwa_678.jpg');
+                            counter++;
+                        } else if (counter % 2 === 1) {
+                            $('.chat-box-body').append(div);
+                            $('#myImg').attr('src', 'https://www.nautiljon.com/images/perso/00/87/itachi_uchiwa_678.jpg');
+
+                            console.log(`vtori if`);
+                            counter++;
+                        }
+
                     }
                 })
             }
@@ -112,18 +128,16 @@ function attachEvents() {
                     for (let message of Object.values(data)) {
                         profileName = `${message.author}\n`;
                         newMessage = `${message.content}\n`;
-                        console.log(profileName);
 
                         div = $(`<div id="chat-messages"><div class="profile my-profile"><img src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
 
-                        console.log(div);
                         $('.chat-box-body').append(div);
                     }
                 } else {
                     $('#error').text('No History!');
                     $('#error').show();
                 }
-               
+
             }
         })
     })
