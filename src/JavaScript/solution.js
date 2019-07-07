@@ -89,7 +89,7 @@ function attachEvents() {
                                 $('#refresh').click();
                             }
                         }
-                        
+
                         $('.chat-box-body').append(div);
                     }
                 })
@@ -97,6 +97,36 @@ function attachEvents() {
         })
     });
 
+    $('#refresh').on('click', showMsg => {
+        historyClicked = true;
+
+        $.ajax({
+            method: 'GET',
+            url: url,
+            success: (data) => {
+                let profileName = '';
+                let newMessage = '';
+                let div = ``;
+
+                if (data !== null) {
+                    for (let message of Object.values(data)) {
+                        profileName = `${message.author}\n`;
+                        newMessage = `${message.content}\n`;
+                        console.log(profileName);
+
+                        div = $(`<div id="chat-messages"><div class="profile my-profile"><img src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
+
+                        console.log(div);
+                        $('.chat-box-body').append(div);
+                    }
+                } else {
+                    $('#error').text('No History!');
+                    $('#error').show();
+                }
+               
+            }
+        })
+    })
 
     $('#delete').on('click', delHistory => {
         let clearHistory = false;
