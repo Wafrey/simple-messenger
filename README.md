@@ -17,9 +17,8 @@ This is free messenger, feel free to try it!
 
 Georgi Dimitrov - [https://www.linkedin.com/in/wafrey/](https://www.linkedin.com/in/wafrey/w) - g.dimitrovtech@gmail.com
 
-Project Link: [https://github.com/Wafrey/PulseFitness](https://github.com/Wafrey/PulseFitness)
+Project Link: [https://github.com/Wafrey/simple-messenger](https://github.com/Wafrey/PulseFitness)
 
 ## Acknowledgements
 * [Font Awesome](https://fontawesome.com)
-* [Smooth-scroll](http://github.com/cferdinandi/smooth-scroll)
-* [WOW.js](https://github.com/matthieua/WOW)
+
