@@ -1,7 +1,7 @@
 # [Simple-Messenger click to see it](https://wafrey.github.io/PulseFitness/)
 This is free messenger, feel free to try it!
 
-![Pulse Fitness Logo](https://tinyurl.com/y3k32ba8)
+![Pulse Fitness Logo](https://tinyurl.com/y5xrhjlx)
 
   <h3 align="center">Messenger</h3>
 
