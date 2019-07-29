@@ -9,7 +9,7 @@ This is free messenger, feel free to try it!
 
 * HTML5
 * CSS
-* jQuerty
+* jQuery
 * AJAX
 * FireBase
 
