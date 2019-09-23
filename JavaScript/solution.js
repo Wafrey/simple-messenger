@@ -23,8 +23,6 @@ function attachEvents() {
         let timeStamp = Date.now();
         let message;
 
-
-
         if (author === '' && firstMessage === 0) {
             $('#error').text('Please enter your name!');
             $('#error').show();
@@ -86,7 +84,7 @@ function attachEvents() {
                                 profileName = `${message.author}\n`;
                                 newMessage = `${message.content}\n`;
 
-                                div = $(`<div id="chat-messages"><div class="profile my-profile"><img id="myImg" src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
+                                div = $(`<div id="chat-messages"><div class="profile my-profile"><img id="myImg" src="../Images/SasukeImg.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
 
                             } else if (historyClicked) {
                                 $('#refresh').click();
@@ -97,11 +95,11 @@ function attachEvents() {
                         if (counter % 2 === 0) {
 
                             $('.chat-box-body').append(div);
-                            $('#myImg').attr('src', 'https://www.nautiljon.com/images/perso/00/87/itachi_uchiwa_678.jpg');
+                            $('#myImg').attr('src', '../Images/ItachiImg.jpg');
                             counter++;
                         } else if (counter % 2 === 1) {
                             $('.chat-box-body').append(div);
-                            $('#myImg').attr('src', 'https://www.nautiljon.com/images/perso/00/87/itachi_uchiwa_678.jpg');
+                            $('#myImg').attr('src', '../Images/ItachiImg.jpg');
 
                             console.log(`vtori if`);
                             counter++;
@@ -129,7 +127,7 @@ function attachEvents() {
                         profileName = `${message.author}\n`;
                         newMessage = `${message.content}\n`;
 
-                        div = $(`<div id="chat-messages"><div class="profile my-profile"><img src="https://static1.fjcdn.com/comments/Its+all+a+matter+of+opinion+sasuke+sama+says+u+_0b37c51c0a6781602ca2e22ff007692d.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
+                        div = $(`<div id="chat-messages"><div class="profile my-profile"><img src="../Images/SasukeImg.jpg" width="30" height="30"/><span>${profileName}</span></div><div class="message my-message">${newMessage}</div></div>`);
 
                         $('.chat-box-body').append(div);
                     }
